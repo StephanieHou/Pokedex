@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <!--
+    manifest.json provides metadata used when your web app is added to the
+    homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+  -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+  <!--
+    Notice the use of %PUBLIC_URL% in the tags above.
+    It will be replaced with the URL of the `public` folder during the build.
+    Only files inside the `public` folder can be referenced from the HTML.
+
+    Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+    work correctly both with client-side routing and a non-root public URL.
+    Learn how to configure a non-root public URL by running `npm run build`.
+  -->
+  <title>React App</title>
+  
+</head>
+<body>
+  <head>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Bungee+Inline|Josefin+Slab|Monoton');
+		body {
+			min-width: 1000px;
+			height: 650px;
+			background: linear-gradient(294deg, #27a887, #13659d, #690f72, #b272d0);
+			background-size: 800% 800%;
+			-webkit-animation: gradient-bg 7s ease infinite;
+			-moz-animation: gradient-bg 7s ease infinite;
+			animation: gradient-bg 7s ease infinite;
+		}
+
+		a {
+			text-decoration: none;
+			color: white;
+		}
+
+		#navig {
+			float: right;
+			color: white;
+		}
+
+		#main {
+			width: 900px;
+			position: absolute;
+			text-align: center;
+			left: 50%;
+			top: 190px;
+			-webkit-transform: translateX(-50%);
+			transform: translateX(-50%);
+		}
+
+		#main h1 {
+			font-family: 'Monoton', cursive;
+			font-size: 80px;
+			/* color: white; */
+		}
+
+		#main h3 {
+			font-size: 20px;
+			font-family: 'Josefin Slab', serif;
+			color: white;
+			position: absolute;
+			top: 170px;
+			right: 26%;
+		}
+		/* Animations */
+		/* Background Animation */
+
+		@-webkit-keyframes gradient-bg {
+			0% {
+				background-position: 0% 44%
+			}
+			50% {
+				background-position: 100% 57%
+			}
+			100% {
+				background-position: 0% 44%
+			}
+		}
+
+		@-moz-keyframes gradient-bg {
+			0% {
+				background-position: 0% 44%
+			}
+			50% {
+				background-position: 100% 57%
+			}
+			100% {
+				background-position: 0% 44%
+			}
+		}
+
+		@keyframes gradient-bg {
+			0% {
+				background-position: 0% 44%
+			}
+			50% {
+				background-position: 100% 57%
+			}
+			100% {
+				background-position: 0% 44%
+			}
+		}
+		/* Scroll Animation */
+
+		.scroll-left {
+			height: 50px;
+			overflow: hidden;
+			position: relative;
+		}
+
+		.scroll-left p {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			line-height: 50px;
+			text-align: center;
+			/* Starting position */
+			-moz-transform: translateX(100%);
+			-webkit-transform: translateX(100%);
+			transform: translateX(100%);
+			/* Apply animation to this element */
+			-moz-animation: scroll-left 10s linear infinite;
+			-webkit-animation: scroll-left 10s linear infinite;
+			animation: scroll-left 10s linear infinite;
+		}
+		/* Move it (define the animation) */
+
+		@-moz-keyframes scroll-left {
+			0% {
+				-moz-transform: translateX(100%);
+			}
+			100% {
+				-moz-transform: translateX(-100%);
+			}
+		}
+
+		@-webkit-keyframes scroll-left {
+			0% {
+				-webkit-transform: translateX(100%);
+			}
+			100% {
+				-webkit-transform: translateX(-100%);
+			}
+		}
+
+		@keyframes scroll-left {
+			0% {
+				-moz-transform: translateX(100%);
+				/* Browser bug fix */
+				-webkit-transform: translateX(100%);
+				/* Browser bug fix */
+				transform: translateX(100%);
+			}
+			100% {
+				-moz-transform: translateX(-100%);
+				/* Browser bug fix */
+				-webkit-transform: translateX(-100%);
+				/* Browser bug fix */
+				transform: translateX(-100%);
+			}
+		}
+		/* Shine */
+
+		h1.effect-shine:hover {
+			-webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, .6) 30%, #000 50%, rgba(0, 0, 0, .6) 70%);
+			-webkit-mask-size: 200%;
+			animation: shine 2s infinite;
+		}
+
+		@-webkit-keyframes shine {
+			from {
+				-webkit-mask-position: 150%;
+			}
+			to {
+				-webkit-mask-position: -50%;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div id="root"></div>
+</body>
+  <!--
+    This HTML file is a template.
+    If you open it directly in the browser, you will see an empty page.
+
+    You can add webfonts, meta tags, or analytics to this file.
+    The build step will place the bundled scripts into the <body> tag.
+
+    To begin the development, run `npm start` or `yarn start`.
+    To create a production bundle, use `npm run build` or `yarn build`.
+  -->
+</body>
+</html>
