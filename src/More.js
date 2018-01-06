@@ -1,12 +1,10 @@
 import React from "react";
 
-const Contact = () => (
-  <div>
-    <h2>
-      <i className="fa fa-user-circle-o" aria-hidden="true" />
-    </h2>
-    Welcome To my Page
+const More = () => (
+  <div id="more">
+    <div id="topbar"></div>
+    <h1> More Content </h1>
   </div>
 );
 
-export default Contact;
+export default More;
