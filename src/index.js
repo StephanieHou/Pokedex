@@ -2,9 +2,9 @@ import React from "react";
 import { render } from "react-dom";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import Welcome from "./Welcome";
-import Home from "./Home"; 
-import Pokedex from "./Pokedex";
-import More from "./More";
+import Home from "./Home/Home"; 
+import Pokedex from "./Pokedex/Pokedex";
+import More from "./More/More";
 
 const App = () => ( 
   <div>
