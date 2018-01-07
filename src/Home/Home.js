@@ -1,9 +1,23 @@
 import React from "react";
 
 const Home = () => (
-  <div id="pokedex">
-    <div id="topbar"></div>
-    <h1> Home </h1>
+  <div id="home">
+    <div id="topbar" />
+    <img
+      src="https://fontmeme.com/permalink/180107/6bff53f03c64bfa95f4499d3fb34e232.png"
+      alt="pokemon-font"
+      border="0"
+    />
+    <p>
+      For more than 15 years, kids all over the world have been discovering the
+      enchanting world of Pokémon. There are currently more than 700 creatures
+      that inhabit the Pokémon universe. Pokémon are creatures of all shapes and
+      sizes who live in the wild or alongside humans. Find out more about
+      Pokemon here on Pokemon Lyfe!
+    </p>
+    <button id="left"> Pokedex </button>
+    <button id="right"> More Content </button>
+    <div id="bottombar" />
   </div>
 );
 

@@ -1,205 +1,346 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="theme-color" content="#000000">
-  <!--
-    manifest.json provides metadata used when your web app is added to the
-    homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
-  -->
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-  <!--
-    Notice the use of %PUBLIC_URL% in the tags above.
-    It will be replaced with the URL of the `public` folder during the build.
-    Only files inside the `public` folder can be referenced from the HTML.
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="theme-color" content="#000000">
 
-    Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-    work correctly both with client-side routing and a non-root public URL.
-    Learn how to configure a non-root public URL by running `npm run build`.
-  -->
-  <title>React App</title>
-  
+	<link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+	<link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+
+	<title>React App</title>
+
 </head>
+
 <body>
-  <head>
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-	<style>
-		@import url('https://fonts.googleapis.com/css?family=Bungee+Inline|Josefin+Slab|Monoton');
-		body {
-			min-width: 1000px;
-			height: 650px;
-      margin:0; 
-			padding:0;
-			background-image: url("https://i.imgur.com/eLUJCSK.jpg");
-			background-size: 1440px 900px;
-			background-position: center;
-		}
 
-		a {
-			text-decoration: none;
-			color: white;
-		}
+	<head>
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+		<style>
+			@import url('https://fonts.googleapis.com/css?family=Bungee+Inline|Josefin+Slab|Monoton');
+			@import url('https://fonts.googleapis.com/css?family=Exo');
+			body {
+				min-width: 1300px;
+				margin: 0;
+				padding: 0;
+			}
 
-		#navig {
-			float: right;
-			color: white;
-			padding: 15px;
-		}
+			a {
+				text-decoration: none;
+				color: white;
+			}
 
-		#main {
-			width: 900px;
-			position: absolute;
-			text-align: center;
-			left: 50%;
-			top: 190px;
-			-webkit-transform: translateX(-50%);
-			transform: translateX(-50%);
-		}
+			#navig {
+				float: right;
+				color: white;
+				padding: 15px;
+			}
 
-		#main h1 {
-			font-family: 'Monoton', cursive;
-			font-size: 85px;
-			text-shadow: 3px 3px 0 white;
-			/* color: white; */
-		}
+			#mainbg {
+				background-image: url("https://i.imgur.com/eLUJCSK.jpg");
+				background-size: 1440px 900px;
+				background-position: center;
+				width: 100%;
+				height: 650px;
+				position: absolute;
+				text-align: center;
+				left: 50%;
+				z-index: -1;
+				-webkit-transform: translateX(-50%);
+				transform: translateX(-50%);
+			}
 
-		#main h3 {
-			font-size: 23px;
-			font-family: 'Josefin Slab', serif;
-			position: absolute;
-			top: 170px;
-			right: 26%;
-			text-shadow: 2px 2px 0 white;
-		}
+			#main {
+				width: 900px;
+				position: absolute;
+				text-align: center;
+				left: 50%;
+				top: 190px;
+				-webkit-transform: translateX(-50%);
+				transform: translateX(-50%);
+			}
 
-		#pokedex{
-			 width: 100%; 
-			 height: 100%;
-			 position: absolute; 
-			 text-align: center; 
-			 left: 50%; 
-			 z-index:-1;
-			 -webkit-transform: translateX(-50%); 
-			 transform:translateX(-50%);
-			 background-image:url("http://3.bp.blogspot.com/-sx5UvOQDXUo/ToJ5UKbuFCI/AAAAAAAAACg/7jPm8pyF6gQ/w1200-h630-p-k-no-nu/173799_Papel-de-Parede-Pokebola-Pokemon--173799_1280x960.jpg");
-			 background-size: 110% 110%;
-			 background-postion: right bottom;
-		}
+			#main h1 {
+				font-family: 'Monoton', cursive;
+				font-size: 85px;
+				text-shadow: 3px 3px 0 white;
+			}
 
-		#topbar{
-			background-color:black;
-			width: 100%;
-			height: 50px;
-		}
+			#main h3 {
+				font-size: 23px;
+				font-family: 'Josefin Slab', serif;
+				position: absolute;
+				top: 170px;
+				right: 26%;
+				text-shadow: 2px 2px 0 white;
+			}
 
-		#more{ 
-			 width: 100%; 
-			 height: 100%; 
-			 position: absolute; 
-			 text-align: center; 
-			 left: 50%; 
-			 z-index:-1; 
-			 -webkit-transform: translateX(-50%);
-			 transform:translateX(-50%); 
-			 background-image:url("http://www.desktop-screens.com/data/out/87/3286197-pokemon-wallpapers.jpg");
-			 background-size: 100% 100%; 
-			 background-postion: right bottom; 
-		}
-		/* Animations */
+			#topbar {
+				background-image: url("https://i.imgur.com/6XEXYZ3.jpg");
+				border-bottom: 5px solid black;
+				width: 100%;
+				height: 50px;
+			}
 
-		/* Scroll Animation */
+			#bottombar {
+				position: absolute;
+				bottom: 0px;
+				background-image: url("https://i.imgur.com/6XEXYZ3.jpg");
+				border-top: 5px solid black;
+				width: 100%;
+				height: 40px;
+			}
 
-		.scroll-left {
-			height: 50px;
-			overflow: hidden;
-			position: relative;
-		}
+			#home {
+				width: 100%;
+				height: 780px;
+				position: absolute;
+				text-align: center;
+				left: 50%;
+				z-index: -1;
+				-webkit-transform: translateX(-50%);
+				transform: translateX(-50%);
+				background-image: url("https://orig00.deviantart.net/7226/f/2014/324/2/e/_wallpaper__generation_3_by_arkeis_pokemon-d85oq7r.jpg");
+				background-size: 100% 100%;
+				background-postion: top center;
+			}
 
-		.scroll-left p {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			margin: 0;
-			line-height: 50px;
-			text-align: center;
-			/* Starting position */
-			-moz-transform: translateX(100%);
-			-webkit-transform: translateX(100%);
-			transform: translateX(100%);
-			/* Apply animation to this element */
-			-moz-animation: scroll-left 10s linear infinite;
-			-webkit-animation: scroll-left 10s linear infinite;
-			animation: scroll-left 10s linear infinite;
-		}
-		/* Move it (define the animation) */
+			#home img {
+				position: absolute;
+				top: 250px;
+				left: 500px;
+			}
 
-		@-moz-keyframes scroll-left {
-			0% {
+			#home p {
+				position: absolute;
+				width: 400px;
+				left: 475px;
+				bottom: 50px;
+				padding: 3px;
+				font-size: 14px;
+				border: 3px solid black;
+				background-color: rgba(255, 255, 255, 0.5);
+				border-radius: 15px;
+			}
+
+			#left:hover {
+				background-color: black!important;
+			}
+
+			#home #left {
+				position: absolute;
+				left: 320px;
+				bottom: 200px;
+				height: 30px;
+				width: 75px;
+				padding: 5px;
+				border-radius: 15px 50px;
+				background-color: FireBrick;
+				color: white;
+				border-color: white;
+			}
+
+			#right:hover {
+				background-color: black!important;
+			}
+
+			#home #right {
+				position: absolute;
+				right: 270px;
+				bottom: 200px;
+				height: 30px;
+				width: 95px;
+				padding: 5px;
+				border-radius: 50px 15px;
+				background-color: Navy;
+				color: white;
+				border-color: white;
+			}
+
+			#pokedex {
+				width: 100%;
+				height: 650px;
+				position: absolute;
+				text-align: center;
+				left: 50%;
+				z-index: -1;
+				-webkit-transform: translateX(-50%);
+				transform: translateX(-50%);
+				background-image: url("http://3.bp.blogspot.com/-sx5UvOQDXUo/ToJ5UKbuFCI/AAAAAAAAACg/7jPm8pyF6gQ/w1200-h630-p-k-no-nu/173799_Papel-de-Parede-Pokebola-Pokemon--173799_1280x960.jpg");
+				background-size: 100% 100%;
+				background-postion: right bottom;
+			}
+
+			#pokeinfo{
+				position:absolute;
+				left:0;
+				top:150px;
+				/* border:1px solid black; */
+				width:416px;
+				heigth:800px;
+				text-align:center;
+			}
+
+			#pokedex h1,
+			p {
+				font-family: 'Exo', sans-serif;
+			}
+
+			#des {
+				font-size:14px;
+			}
+
+			#pokedex table,td{
+				/* border: 1px solid black; */
+				width: 350px;
+				padding: 0;
+			}
+
+			#height {
+
+			}
+
+			#weight {
+
+			}
+
+			#category {
+
+			}
+
+			#abil {
+
+			}
+
+			#type {
+
+			}
+
+			#weak {
+
+			}
+
+			#bottombarpoke {
+				position: absolute;
+				bottom: -60px;
+				background-image: url("https://i.imgur.com/6XEXYZ3.jpg");
+				border-top: 5px solid black;
+				width: 100%;
+				height: 98px;
+			}
+
+			#deximg {
+				position: absolute;
+				left: -50px;
+				top: -27px;
+				width: 530px;
+				height: 730px;
+				z-index: -1;
+			}
+
+			#more {
+				width: 100%;
+				height: 800px;
+				position: absolute;
+				text-align: center;
+				left: 50%;
+				z-index: -1;
+				-webkit-transform: translateX(-50%);
+				transform: translateX(-50%);
+				background-image: url("http://www.desktop-screens.com/data/out/87/3286197-pokemon-wallpapers.jpg");
+				background-size: 100% 100%;
+				background-postion: right bottom;
+			}
+
+			#more img {
+				position: absolute;
+				top: 130px;
+				left: 380px;
+			}
+			/* Animations */
+			/* Scroll Animation */
+
+			.scroll-left {
+				height: 50px;
+				overflow: hidden;
+				position: relative;
+			}
+
+			.scroll-left p {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				line-height: 50px;
+				text-align: center;
+				/* Starting position */
 				-moz-transform: translateX(100%);
-			}
-			100% {
-				-moz-transform: translateX(-100%);
-			}
-		}
-
-		@-webkit-keyframes scroll-left {
-			0% {
 				-webkit-transform: translateX(100%);
-			}
-			100% {
-				-webkit-transform: translateX(-100%);
-			}
-		}
-
-		@keyframes scroll-left {
-			0% {
-				-moz-transform: translateX(100%);
-				/* Browser bug fix */
-				-webkit-transform: translateX(100%);
-				/* Browser bug fix */
 				transform: translateX(100%);
+				/* Apply animation to this element */
+				-moz-animation: scroll-left 10s linear infinite;
+				-webkit-animation: scroll-left 10s linear infinite;
+				animation: scroll-left 10s linear infinite;
 			}
-			100% {
-				-moz-transform: translateX(-100%);
-				/* Browser bug fix */
-				-webkit-transform: translateX(-100%);
-				/* Browser bug fix */
-				transform: translateX(-100%);
-			}
-		}
-		/* Shine */
+			/* Move it (define the animation) */
 
-		h1.effect-shine:hover {
-			-webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, .6) 30%, #000 50%, rgba(0, 0, 0, .6) 70%);
-			-webkit-mask-size: 200%;
-			animation: shine 2s infinite;
-		}
-
-		@-webkit-keyframes shine {
-			from {
-				-webkit-mask-position: 150%;
+			@-moz-keyframes scroll-left {
+				0% {
+					-moz-transform: translateX(100%);
+				}
+				100% {
+					-moz-transform: translateX(-100%);
+				}
 			}
-			to {
-				-webkit-mask-position: -50%;
-			}
-		}
-	</style>
-</head>
 
-<body>
-	<div id="root"></div>
+			@-webkit-keyframes scroll-left {
+				0% {
+					-webkit-transform: translateX(100%);
+				}
+				100% {
+					-webkit-transform: translateX(-100%);
+				}
+			}
+
+			@keyframes scroll-left {
+				0% {
+					-moz-transform: translateX(100%);
+					/* Browser bug fix */
+					-webkit-transform: translateX(100%);
+					/* Browser bug fix */
+					transform: translateX(100%);
+				}
+				100% {
+					-moz-transform: translateX(-100%);
+					/* Browser bug fix */
+					-webkit-transform: translateX(-100%);
+					/* Browser bug fix */
+					transform: translateX(-100%);
+				}
+			}
+			/* Shine */
+
+			h1.effect-shine:hover {
+				-webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, .6) 30%, #000 50%, rgba(0, 0, 0, .6) 70%);
+				-webkit-mask-size: 200%;
+				animation: shine 2s infinite;
+			}
+
+			@-webkit-keyframes shine {
+				from {
+					-webkit-mask-position: 150%;
+				}
+				to {
+					-webkit-mask-position: -50%;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="root"></div>
+	</body>
 </body>
-  <!--
-    This HTML file is a template.
-    If you open it directly in the browser, you will see an empty page.
 
-    You can add webfonts, meta tags, or analytics to this file.
-    The build step will place the bundled scripts into the <body> tag.
-
-    To begin the development, run `npm start` or `yarn start`.
-    To create a production bundle, use `npm run build` or `yarn build`.
-  -->
-</body>
 </html>

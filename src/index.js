@@ -2,11 +2,11 @@ import React from "react";
 import { render } from "react-dom";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import Welcome from "./Welcome";
-import Home from "./Home/Home"; 
+import Home from "./Home/Home";
 import Pokedex from "./Pokedex/Pokedex";
 import More from "./More/More";
 
-const App = () => ( 
+const App = () => (
   <div>
     <nav id="navig">
       <Link to="/Home">Home</Link>
