@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => (
   <div id="home">
@@ -15,8 +16,8 @@ const Home = () => (
       sizes who live in the wild or alongside humans. Find out more about
       Pokemon here on Pokemon Lyfe!
     </p>
-    <button id="left"> Pokedex </button>
-    <button id="right"> More Content </button>
+    <Link to="/pokedex"><button id="left"> Pokedex </button></Link>
+    <Link to="/more"><button id="right"> More Content </button></Link>
     <div id="bottombar" />
   </div>
 );
