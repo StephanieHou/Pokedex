@@ -8,13 +8,6 @@ import More from "./More/More";
 
 const App = () => (
   <div>
-    <nav id="navig">
-      <Link to="/Home">Home</Link>
-      {"  /  "}
-      <Link to="/Pokedex">Pokedex</Link>
-      {"  /  "}
-      <Link to="/More">More</Link>
-    </nav>
     <div>
       <Route exact path="/" component={Welcome} />
       <Route exact path="/Home" component={Home} />
